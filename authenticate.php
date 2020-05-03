@@ -39,7 +39,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
 		echo 'Welcome ' . $_SESSION['name'] . '!';
-		header('Location: zwiebelbande.html');
+		//Put the file which should be opened after the user logs in sucessfully exampple : 'Location: dashboard.html'
+		header('Location: index.html');
 		exit;
 		
 	} else {
